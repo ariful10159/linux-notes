@@ -83,3 +83,13 @@ To verify that the Flutter CLI is successfully installed and recognized by your 
 ```bash
 flutter --version
 ```
+### 📌 View PATH in Linux (Line by Line)
+
+To display each directory in the `PATH` environment variable on a separate line:
+
+```bash
+echo $PATH | tr ':' '\n'
+```
+
+✅ This splits the `PATH` using `:` and prints each entry line by line, making it easier to read and understand.
+
