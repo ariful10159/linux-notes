@@ -1,5 +1,5 @@
 
-# 📌 2. GitHub note (copy-paste ready)
+#  GitHub notes
 
 
 
