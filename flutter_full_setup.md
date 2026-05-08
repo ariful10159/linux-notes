@@ -1,6 +1,3 @@
-ঠিক আছে, এটা ধরে আমি README টা আপডেট করে দিচ্ছি যাতে GitHub এ clean ও accurate দেখায়।
-
----
 
 # 🚀 Flutter Setup on Linux (Ubuntu) – Complete Guide
 
@@ -14,13 +11,7 @@
 
 [Flutter Linux Install Guide](https://docs.flutter.dev/get-started/install/linux?utm_source=chatgpt.com)
 
-### Then extract & move:
 
-```bash id="f1a9k2"
-cd ~/Downloads
-tar xf flutter_linux_*.tar.xz
-mv flutter ~/
-```
 
 ---
 
@@ -187,14 +178,3 @@ flutter run
 ✔ Web support enabled
 
 ---
-
-# 💡 Notes
-
-* Android Studio দরকার নেই
-* VS Code + SDK enough
-* Desktop Linux tools optional
-* Everything works for mobile development
-
----
-
-চাও হলে আমি এটা আরও **GitHub professional README (badges + screenshots + structured sections)** বানিয়ে দিতে পারি, যেটা দেখলেই portfolio level লাগবে।
