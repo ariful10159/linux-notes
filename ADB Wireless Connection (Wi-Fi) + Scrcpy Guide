@@ -1,0 +1,126 @@
+
+
+# ADB Wireless Connection (Wi-Fi) + Scrcpy Guide
+
+## Requirements
+
+* Android phone
+* Laptop with ADB installed
+* Phone and laptop connected to same Wi-Fi network
+* USB cable (only for initial setup)
+
+---
+
+## Step 1: Start ADB on laptop
+
+```bash
+adb kill-server
+adb start-server
+adb devices
+```
+
+Check that your phone is detected via USB.
+
+---
+
+## Step 2: Enable TCP/IP mode (with USB connected)
+
+```bash
+adb tcpip 5555
+```
+
+This restarts ADB in wireless mode.
+
+---
+
+## Step 3: Get phone IP address
+
+On phone:
+
+* Settings → Wi-Fi → Connected network details
+
+Example:
+
+```
+192.168.0.101
+```
+
+---
+
+## Step 4: Disconnect USB cable
+
+---
+
+## Step 5: Connect via Wi-Fi
+
+```bash
+adb connect 192.168.0.101:5555
+```
+
+---
+
+## Step 6: Verify connection
+
+```bash
+adb devices
+```
+
+Expected output:
+
+```
+192.168.0.101:5555    device
+```
+
+---
+
+## Step 7: Run Scrcpy
+
+```bash
+scrcpy
+```
+
+---
+
+# Troubleshooting
+
+## 1. Connection timeout
+
+* Restart ADB:
+
+```bash
+adb kill-server
+adb start-server
+```
+
+* Repeat Step 2 and Step 5
+
+---
+
+## 2. Device not showing
+
+Check:
+
+* Same Wi-Fi network
+* VPN OFF
+* Private DNS OFF
+* Router does not block device-to-device communication
+
+---
+
+## 3. Reset connection
+
+```bash
+adb disconnect
+adb connect 192.168.0.101:5555
+```
+
+---
+
+# Quick One-Line Flow (after setup)
+
+```bash
+adb connect <PHONE_IP>:5555
+scrcpy
+```
+
+---
